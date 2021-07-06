@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
     "scripts": {
-    "dev": "nodemon -- -r esm -r dotenv/config index.js",
+    "dev": "nodemon -- -r esm -r dotenv/config src/producer/index.js",
     "start": "pm2 start index.js --watch --no-daemon --node-args=\"-r esm\""
   },
   "dependencies": {

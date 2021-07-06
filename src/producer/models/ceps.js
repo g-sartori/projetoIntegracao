@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const schema = new mongoose.Schema(
+const CEPschema = new mongoose.Schema(
   {
     cep: {
       type: String,
@@ -9,6 +9,7 @@ const schema = new mongoose.Schema(
     status: {
       type: String,
       required: true,
+      default: 'PENDENTE'
     },
     data: { 
       cep: String, 
@@ -28,4 +29,4 @@ const schema = new mongoose.Schema(
     toObject: { virtuals: true, getters: true },
   }
 )
-export const CEPModel = mongoose.model('CEP', schema)
+export const CEPModel = mongoose.model('CEP', CEPschema)
