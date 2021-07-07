@@ -24,9 +24,10 @@ const CEPschema = new mongoose.Schema(
       bairro: String,
       localidade: String,
       uf: String,
-      unidade: String,
       ibge: String,
       gia: String,
+      ddd: String,
+      siafi: String,
     },
   },
   {
