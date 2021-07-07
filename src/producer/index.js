@@ -1,5 +1,5 @@
-import './setup/db'
-import { server } from './setup/server'
+import '../setup/db'
+import { server } from '../setup/server'
 import { CreateCEPService } from './services/CreateCEPService';
 import { SendQueueMessageService } from './services/SendQueueMessageService';
 
