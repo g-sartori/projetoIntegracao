@@ -12,8 +12,6 @@ server.use(restify.plugins.bodyParser({
 }))
 
 server.start = onStart => {
-  console.log(process.env.SERVER_HOST);
-  console.log(process.env.SERVER_PORT);
   server.listen(process.env.SERVER_PORT, process.env.SERVER_HOST, onStart)
   return server
 }
