@@ -5,7 +5,6 @@ const sqs = new AWS.SQS({ apiVersion: '2012-11-05' });
 
 class DeleteQueueMessageService {
   execute(receiptHandle) {
-    console.log('\nEntrou no delete message');
     const deleteParams = {
       QueueUrl: process.env.QUEUEURL,
       ReceiptHandle: receiptHandle
@@ -15,10 +14,9 @@ class DeleteQueueMessageService {
       if (err) {
         console.log({ messageNotDeleted: { errorMessage: err.message } });
       } else {
-        console.log('Mensagem Deletada');
+        console.log('Mensagem Deletada da fila:%s', process.env.QUEUEURL);
       }
     })
-    console.log('Fim do delete message');
   }
 }
 

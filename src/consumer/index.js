@@ -7,7 +7,6 @@ AWS.config.update({ region: 'us-east-1' });
 const sqs = new AWS.SQS({ apiVersion: '2012-11-05' });
 
 const consumer = async () => {
-    console.log('\nEntrou no consumer');
     const params = {
     QueueUrl: process.env.QUEUEURL
     };
@@ -18,12 +17,8 @@ const consumer = async () => {
         } else if (data.Messages) {
             const cepId = data.Messages[0].Body;
             const receiptHandle = data.Messages[0].ReceiptHandle;
-            
-            console.log(cepId);
             const updateCEP = new UpdateCEPService();
-            const newCEP = await updateCEP.execute(cepId);
-            console.log('Voltou do update CEP \n');
-
+            updateCEP.execute(cepId);
             const updateQueue = new DeleteQueueMessageService();
             updateQueue.execute(receiptHandle)
             return consumer();
