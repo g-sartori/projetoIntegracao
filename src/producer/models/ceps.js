@@ -1,7 +1,13 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+import MUUID from 'uuid-mongodb';
 
 const CEPschema = new mongoose.Schema(
   {
+    _id: {
+      type: 'object',
+      value: { type: 'Buffer' },
+      default: () => MUUID.v4().toString()
+    },
     cep: {
       type: String,
       required: true,
