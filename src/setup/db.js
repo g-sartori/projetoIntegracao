@@ -12,3 +12,5 @@ mongoose.connect(
 
 mongoose.connection.on('error', () => console.error('Connection error:'))
 mongoose.connection.once('open', () => console.log('Database connected as %s on %s:%s/%s', DB_USER, DB_HOST, DB_PORT, DB_NAME))
+
+export {mongoose};
