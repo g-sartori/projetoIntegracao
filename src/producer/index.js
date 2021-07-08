@@ -3,8 +3,6 @@ const server = require('../setup/server');
 const CreateCEPService = require('./services/CreateCEPService');
 const SendQueueMessageService = require('./services/SendQueueMessageService');
 
-console.log('entrou no index')
-
 server.post('/cep', async (req, res) => {
   try {
     console.log('\n \n \nEntrou no post de /cep');

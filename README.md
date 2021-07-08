@@ -7,17 +7,26 @@
 <p>
     <strong>1 - Configurar variáveis de ambiente:</strong> Renomear o ".env-example" para ".env" e preencher todas as variáveis de ambiente;
 </p>
+<p>
+    <strong>2 - Configurar o git:</strong> Renomear o ".gitignore-example" para ".gitignore";
+</p>
 <p> 
-    <strong>2 - Criar o Banco:</strong> O Makefile irá inicializar o docker já com as variáveis de ambiente carregadas
+    <strong>3 - Criar o Banco:</strong> O Makefile irá inicializar o docker já com as variáveis de ambiente carregadas
     <pre><code> make up </code></pre>
 </p>
 <p> 
-    <strong>3 - Iniciar o producer:</strong> Chama o script já requisitando o carregamento das variáveis de ambiente
+    <strong>4 - Iniciar o producer:</strong> Chama o script já requisitando o carregamento das variáveis de ambiente
     <pre><code> yarn dev:producer </code></pre>
+    Ao terminar de rodar o script o console deve apresentar:
+    <pre>Started server on 0.0.0.0:7070
+Database connected as dbuser on 0.0.0.0:27017/projetoIntegracao</pre>
 </p>
 <p> 
-    <strong>4 - Iniciar o consumer: Chama o script já requisitanto o carregamento das variáveis de ambiente</strong> 
+    <strong>5 - Iniciar o consumer: Chama o script já requisitando o carregamento das variáveis de ambiente</strong> 
     <pre><code> yarn dev:consumer</code></pre>
+    Ao terminar de rodar o script o console deve apresentar:
+    <pre>Database connected as dbuser on 0.0.0.0:27017/projetoIntegracao
+DB pronto, iniciando o consumer</pre>
 </p>
 
 <br />

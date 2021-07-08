@@ -30,6 +30,6 @@ const consumer = async () => {
 }
 
 mongoose.connection.once('open', async () => {
-    console.log('DB pronto, iniciar o consumer')
+    console.log('DB pronto, iniciando o consumer')
     await consumer();
 })
