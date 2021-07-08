@@ -1,5 +1,5 @@
-import { CEPModel } from '../models/ceps'
-import * as yup from 'yup';
+const CEPModel = require('../models/ceps');
+const yup = require('yup');
 
 class CreateCEPService {
   async execute({ req, res, cep }) {
@@ -36,4 +36,4 @@ class CreateCEPService {
   }
 }
 
-export { CreateCEPService };
+module.exports = CreateCEPService

@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import MUUID from 'uuid-mongodb';
+const mongoose = require('mongoose');
+const MUUID = require('uuid-mongodb');
 
 const CEPschema = new mongoose.Schema(
   {
@@ -36,4 +36,5 @@ const CEPschema = new mongoose.Schema(
     toObject: { virtuals: true, getters: true },
   }
 )
-export const CEPModel = mongoose.model('CEP', CEPschema)
+const CEPModel = mongoose.model('CEP', CEPschema);
+module.exports = CEPModel 

@@ -1,7 +1,7 @@
-import { mongoose } from '../setup/db'
-import AWS from 'aws-sdk';
-import {UpdateCEPService} from './services/UpdateCEPService'
-import { DeleteQueueMessageService } from './services/DeleteQueueMessageService';
+const mongoose = require('../setup/db');
+const AWS = require('aws-sdk');
+const UpdateCEPService= require('./services/UpdateCEPService');
+const DeleteQueueMessageService = require('./services/DeleteQueueMessageService');
 
 AWS.config.update({ region: 'us-east-1' });
 const sqs = new AWS.SQS({ apiVersion: '2012-11-05' });

@@ -1,7 +1,9 @@
-import '../setup/db'
-import { server } from '../setup/server'
-import { CreateCEPService } from './services/CreateCEPService';
-import { SendQueueMessageService } from './services/SendQueueMessageService';
+const mongoose = require('../setup/db');
+const server = require('../setup/server');
+const CreateCEPService = require('./services/CreateCEPService');
+const SendQueueMessageService = require('./services/SendQueueMessageService');
+
+console.log('entrou no index')
 
 server.post('/cep', async (req, res) => {
   try {

@@ -1,5 +1,5 @@
-import { CEPModel } from '../../producer/models/ceps';
-import fetch from 'node-fetch'
+const CEPModel = require('../../producer/models/ceps');
+const fetch = require('node-fetch');
 
 class UpdateCEPService {
   async execute(cepId) {
