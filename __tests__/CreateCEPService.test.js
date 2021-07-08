@@ -35,6 +35,7 @@ describe('CreateCEPService: Receber um CEP e criar o registro no DB ', () => {
       .send({
         cep: data.cep
       });
+      // esse teste retorna falha caso o data.cep já esteja cadastrado no banco
     expect(response.status).toBe(201);
   });
   it('Encontrar e Retornar um CEP quando já cadastrado', async () => {

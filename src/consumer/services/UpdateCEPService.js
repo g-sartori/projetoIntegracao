@@ -43,4 +43,4 @@ class UpdateCEPService {
   }
 }
 
-export { UpdateCEPService };
+module.exports = UpdateCEPService

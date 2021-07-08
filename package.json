@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:producer": "nodemon -- -r dotenv/config src/producer/index.js",
-    "dev:consumer": "nodemon -- -r dotenv/config src/consumer/index.js",
+    "dev:producer": "nodemon -r dotenv/config src/producer/index.js",
+    "dev:consumer": "nodemon -r dotenv/config src/consumer/index.js",
     "test": "jest  --runInBand ./__tests__",
     "start": "pm2 start index.js --watch --no-daemon --node-args=\"-r esm\""
   },
